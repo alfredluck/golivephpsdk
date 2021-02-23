@@ -20,12 +20,6 @@
         "phpunit/phpunit": "^9.5",
         "mockery/mockery": "^1.4"
     },
-    "repositories": {
-        "weather": {
-            "type": "path",
-            "url": "../golivephpsdk"
-        }
-    },
     "extra": {
         "laravel": {
             "providers": [
