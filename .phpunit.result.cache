@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":202:{a:2:{s:7:"defects";a:1:{s:65:"Alfredluck\Golivephpsdk\tests\GoliveJavaCardTest::testGetUserInfo";i:5;}s:5:"times";a:1:{s:65:"Alfredluck\Golivephpsdk\tests\GoliveJavaCardTest::testGetUserInfo";d:0.781;}}}
