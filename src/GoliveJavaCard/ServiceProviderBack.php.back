@@ -6,7 +6,7 @@
  * Time: 14:36
  */
 
-namespace Alfredluck\Golivephpsdk\GoliveJavaCard;
+namespace Golivephpsdk\GoliveJavaCard;
 
 
 class ServiceProvider extends  \Illuminate\Support\ServiceProvider

@@ -11,8 +11,8 @@
 
 
 
-namespace Alfredluck\Golivephpsdk\tests;
-use Alfredluck\Golivephpsdk\GoliveJavaCard\User;
+namespace Golivephpsdk\tests;
+use Golivephpsdk\GoliveJavaCard\User;
 use PHPUnit\Framework\TestCase;
 
 

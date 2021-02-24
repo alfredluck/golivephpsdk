@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Contracts;
+namespace Golivephpsdk\Kernel\Contracts;
 
 use Psr\Http\Message\RequestInterface;
 
@@ -26,7 +26,7 @@ interface AccessTokenInterface
     public function getToken(): array;
 
     /**
-     * @return \Alfredluck\Kernel\Contracts\AccessTokenInterface
+     * @return \Golivephpsdk\Kernel\Contracts\AccessTokenInterface
      */
     public function refresh(): self;
 

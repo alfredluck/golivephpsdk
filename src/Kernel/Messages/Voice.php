@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Messages;
+namespace Golivephpsdk\Kernel\Messages;
 
 /**
  * Class Voice.

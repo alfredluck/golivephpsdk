@@ -9,13 +9,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Traits;
+namespace Golivephpsdk\Kernel\Traits;
 
-use Alfredluck\Kernel\Contracts\Arrayable;
-use Alfredluck\Kernel\Exceptions\InvalidArgumentException;
-use Alfredluck\Kernel\Exceptions\InvalidConfigException;
-use Alfredluck\Kernel\Http\Response;
-use Alfredluck\Kernel\Support\Collection;
+use Golivephpsdk\Kernel\Contracts\Arrayable;
+use Golivephpsdk\Kernel\Exceptions\InvalidArgumentException;
+use Golivephpsdk\Kernel\Exceptions\InvalidConfigException;
+use Golivephpsdk\Kernel\Http\Response;
+use Golivephpsdk\Kernel\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -29,9 +29,9 @@ trait ResponseCastable
      * @param \Psr\Http\Message\ResponseInterface $response
      * @param string|null                         $type
      *
-     * @return array|\Alfredluck\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @return array|\Golivephpsdk\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      */
     protected function castResponseToType(ResponseInterface $response, $type = null)
     {
@@ -60,10 +60,10 @@ trait ResponseCastable
      * @param mixed       $response
      * @param string|null $type
      *
-     * @return array|\Alfredluck\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @return array|\Golivephpsdk\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      */
     protected function detectAndCastResponseToType($response, $type = null)
     {

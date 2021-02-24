@@ -1,11 +1,16 @@
 <?php
 
 
-namespace Alfredluck\Golivephpsdk;
+namespace Golivephpsdk;
 
-use Alfredluck\Kernel\Support\Str;
+use Golivephpsdk\Kernel\Support\Str;
 
 
+/**
+ * Class Factory
+ * @method static \Golivephpsdk\GoliveJavaCard\Application   $golive_java_card
+ * @package Golivephpsdk
+ */
 class Factory
 {
 
@@ -16,7 +21,7 @@ class Factory
     public static function make($name, array $config)
     {
         $namespace = Str::studly($name);
-        $application = "Alfredluck\\Golivephpsdk\\{$namespace}\\Application";
+        $application = "Golivephpsdk\\{$namespace}\\Application";
         return new $application($config);
     }
 

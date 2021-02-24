@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Providers;
+namespace Golivephpsdk\Kernel\Providers;
 
-use Alfredluck\Kernel\Config;
+use Golivephpsdk\Kernel\Config;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 

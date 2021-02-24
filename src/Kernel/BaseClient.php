@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel;
+namespace Golivephpsdk\Kernel;
 
-use Alfredluck\Kernel\Contracts\AccessTokenInterface;
-use Alfredluck\Kernel\Http\Response;
-use Alfredluck\Kernel\Traits\HasHttpRequests;
+use Golivephpsdk\Kernel\Contracts\AccessTokenInterface;
+use Golivephpsdk\Kernel\Http\Response;
+use Golivephpsdk\Kernel\Traits\HasHttpRequests;
 use GuzzleHttp\MessageFormatter;
 use GuzzleHttp\Middleware;
 use Psr\Http\Message\RequestInterface;
@@ -30,12 +30,12 @@ class BaseClient
     use HasHttpRequests { request as performRequest; }
 
     /**
-     * @var \Alfredluck\Kernel\ServiceContainer
+     * @var \Golivephpsdk\Kernel\ServiceContainer
      */
     protected $app;
 
     /**
-     * @var \Alfredluck\Kernel\Contracts\AccessTokenInterface
+     * @var \Golivephpsdk\Kernel\Contracts\AccessTokenInterface
      */
     protected $accessToken;
 
@@ -47,8 +47,8 @@ class BaseClient
     /**
      * BaseClient constructor.
      *
-     * @param \Alfredluck\Kernel\ServiceContainer                    $app
-     * @param \Alfredluck\Kernel\Contracts\AccessTokenInterface|null $accessToken
+     * @param \Golivephpsdk\Kernel\ServiceContainer                    $app
+     * @param \Golivephpsdk\Kernel\Contracts\AccessTokenInterface|null $accessToken
      */
     public function __construct(ServiceContainer $app, AccessTokenInterface $accessToken = null)
     {
@@ -62,9 +62,9 @@ class BaseClient
      * @param string $url
      * @param array  $query
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Alfredluck\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Golivephpsdk\Kernel\Support\Collection|array|object|string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function httpGet(string $url, array $query = [])
@@ -78,9 +78,9 @@ class BaseClient
      * @param string $url
      * @param array  $data
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Alfredluck\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Golivephpsdk\Kernel\Support\Collection|array|object|string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function httpPost(string $url, array $data = [])
@@ -95,9 +95,9 @@ class BaseClient
      * @param array  $data
      * @param array  $query
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Alfredluck\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Golivephpsdk\Kernel\Support\Collection|array|object|string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function httpPostJson(string $url, array $data = [], array $query = [])
@@ -113,9 +113,9 @@ class BaseClient
      * @param array  $form
      * @param array  $query
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Alfredluck\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Golivephpsdk\Kernel\Support\Collection|array|object|string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function httpUpload(string $url, array $files = [], array $form = [], array $query = [])
@@ -145,7 +145,7 @@ class BaseClient
     }
 
     /**
-     * @param \Alfredluck\Kernel\Contracts\AccessTokenInterface $accessToken
+     * @param \Golivephpsdk\Kernel\Contracts\AccessTokenInterface $accessToken
      *
      * @return $this
      */
@@ -162,9 +162,9 @@ class BaseClient
      * @param array  $options
      * @param bool   $returnRaw
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Alfredluck\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Golivephpsdk\Kernel\Support\Collection|array|object|string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function request(string $url, string $method = 'GET', array $options = [], $returnRaw = false)
@@ -185,9 +185,9 @@ class BaseClient
      * @param string $method
      * @param array  $options
      *
-     * @return \Alfredluck\Kernel\Http\Response
+     * @return \Golivephpsdk\Kernel\Http\Response
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function requestRaw(string $url, string $method = 'GET', array $options = [])

@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Http;
+namespace Golivephpsdk\Kernel\Http;
 
-use Alfredluck\Kernel\Exceptions\InvalidArgumentException;
-use Alfredluck\Kernel\Exceptions\RuntimeException;
-use Alfredluck\Kernel\Support\File;
+use Golivephpsdk\Kernel\Exceptions\InvalidArgumentException;
+use Golivephpsdk\Kernel\Exceptions\RuntimeException;
+use Golivephpsdk\Kernel\Support\File;
 
 /**
  * Class StreamResponse.
@@ -29,8 +29,8 @@ class StreamResponse extends Response
      *
      * @return bool|int
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public function save(string $directory, string $filename = '', bool $appendSuffix = true)
     {
@@ -76,8 +76,8 @@ class StreamResponse extends Response
      *
      * @return bool|int
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public function saveAs(string $directory, string $filename, bool $appendSuffix = true)
     {

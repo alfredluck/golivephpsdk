@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Support;
+namespace Golivephpsdk\Kernel\Support;
 
 use ArrayAccess;
 use ArrayIterator;
 use Countable;
-use Alfredluck\Kernel\Contracts\Arrayable;
+use Golivephpsdk\Kernel\Contracts\Arrayable;
 use IteratorAggregate;
 use JsonSerializable;
 use Serializable;
@@ -58,7 +58,7 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSeria
      *
      * @param array $keys
      *
-     * @return \Alfredluck\Kernel\Support\Collection
+     * @return \Golivephpsdk\Kernel\Support\Collection
      */
     public function only(array $keys)
     {
@@ -94,7 +94,7 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSeria
      *
      * @param Collection|array $items
      *
-     * @return \Alfredluck\Kernel\Support\Collection
+     * @return \Golivephpsdk\Kernel\Support\Collection
      */
     public function merge($items)
     {

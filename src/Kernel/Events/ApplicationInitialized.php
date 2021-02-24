@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Events;
+namespace Golivephpsdk\Kernel\Events;
 
-use Alfredluck\Kernel\ServiceContainer;
+use Golivephpsdk\Kernel\ServiceContainer;
 
 /**
  * Class ApplicationInitialized.
@@ -21,12 +21,12 @@ use Alfredluck\Kernel\ServiceContainer;
 class ApplicationInitialized
 {
     /**
-     * @var \Alfredluck\Kernel\ServiceContainer
+     * @var \Golivephpsdk\Kernel\ServiceContainer
      */
     public $app;
 
     /**
-     * @param \Alfredluck\Kernel\ServiceContainer $app
+     * @param \Golivephpsdk\Kernel\ServiceContainer $app
      */
     public function __construct(ServiceContainer $app)
     {

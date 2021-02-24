@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Traits;
+namespace Golivephpsdk\Kernel\Traits;
 
-use Alfredluck\Kernel\Exceptions\InvalidArgumentException;
-use Alfredluck\Kernel\ServiceContainer;
+use Golivephpsdk\Kernel\Exceptions\InvalidArgumentException;
+use Golivephpsdk\Kernel\ServiceContainer;
 use Psr\Cache\CacheItemPoolInterface;
 use Psr\SimpleCache\CacheInterface as SimpleCacheInterface;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
@@ -36,7 +36,7 @@ trait InteractsWithCache
      *
      * @return \Psr\SimpleCache\CacheInterface
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     public function getCache()
     {
@@ -63,7 +63,7 @@ trait InteractsWithCache
      *
      * @return $this
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     public function setCache($cache)
     {

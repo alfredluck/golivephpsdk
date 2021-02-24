@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Messages;
+namespace Golivephpsdk\Kernel\Messages;
 
-use Alfredluck\Kernel\Contracts\MediaInterface;
-use Alfredluck\Kernel\Support\Str;
+use Golivephpsdk\Kernel\Contracts\MediaInterface;
+use Golivephpsdk\Kernel\Support\Str;
 
 /**
  * Class Media.
@@ -50,7 +50,7 @@ class Media extends Message implements MediaInterface
     /**
      * @return string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     public function getMediaId(): string
     {

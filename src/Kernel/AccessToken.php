@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel;
+namespace Golivephpsdk\Kernel;
 
-use Alfredluck\Kernel\Contracts\AccessTokenInterface;
-use Alfredluck\Kernel\Exceptions\HttpException;
-use Alfredluck\Kernel\Exceptions\InvalidArgumentException;
-use Alfredluck\Kernel\Exceptions\RuntimeException;
-use Alfredluck\Kernel\Traits\HasHttpRequests;
-use Alfredluck\Kernel\Traits\InteractsWithCache;
+use Golivephpsdk\Kernel\Contracts\AccessTokenInterface;
+use Golivephpsdk\Kernel\Exceptions\HttpException;
+use Golivephpsdk\Kernel\Exceptions\InvalidArgumentException;
+use Golivephpsdk\Kernel\Exceptions\RuntimeException;
+use Golivephpsdk\Kernel\Traits\HasHttpRequests;
+use Golivephpsdk\Kernel\Traits\InteractsWithCache;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -31,7 +31,7 @@ abstract class AccessToken implements AccessTokenInterface
     use InteractsWithCache;
 
     /**
-     * @var \Alfredluck\Kernel\ServiceContainer
+     * @var \Golivephpsdk\Kernel\ServiceContainer
      */
     protected $app;
 
@@ -68,7 +68,7 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * AccessToken constructor.
      *
-     * @param \Alfredluck\Kernel\ServiceContainer $app
+     * @param \Golivephpsdk\Kernel\ServiceContainer $app
      */
     public function __construct(ServiceContainer $app)
     {
@@ -78,11 +78,11 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * @return array
      *
-     * @throws \Alfredluck\Kernel\Exceptions\HttpException
+     * @throws \Golivephpsdk\Kernel\Exceptions\HttpException
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public function getRefreshedToken(): array
     {
@@ -94,11 +94,11 @@ abstract class AccessToken implements AccessTokenInterface
      *
      * @return array
      *
-     * @throws \Alfredluck\Kernel\Exceptions\HttpException
+     * @throws \Golivephpsdk\Kernel\Exceptions\HttpException
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public function getToken(bool $refresh = false): array
     {
@@ -123,10 +123,10 @@ abstract class AccessToken implements AccessTokenInterface
      * @param string $token
      * @param int    $lifetime
      *
-     * @return \Alfredluck\Kernel\Contracts\AccessTokenInterface
+     * @return \Golivephpsdk\Kernel\Contracts\AccessTokenInterface
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      * @throws \Psr\SimpleCache\InvalidArgumentException
      */
     public function setToken(string $token, int $lifetime = 7200): AccessTokenInterface
@@ -144,13 +144,13 @@ abstract class AccessToken implements AccessTokenInterface
     }
 
     /**
-     * @return \Alfredluck\Kernel\Contracts\AccessTokenInterface
+     * @return \Golivephpsdk\Kernel\Contracts\AccessTokenInterface
      *
-     * @throws \Alfredluck\Kernel\Exceptions\HttpException
+     * @throws \Golivephpsdk\Kernel\Exceptions\HttpException
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public function refresh(): AccessTokenInterface
     {
@@ -163,11 +163,11 @@ abstract class AccessToken implements AccessTokenInterface
      * @param array $credentials
      * @param bool  $toArray
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Alfredluck\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Golivephpsdk\Kernel\Support\Collection|array|object|string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\HttpException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\HttpException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     public function requestToken(array $credentials, $toArray = false)
     {
@@ -188,11 +188,11 @@ abstract class AccessToken implements AccessTokenInterface
      *
      * @return \Psr\Http\Message\RequestInterface
      *
-     * @throws \Alfredluck\Kernel\Exceptions\HttpException
+     * @throws \Golivephpsdk\Kernel\Exceptions\HttpException
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public function applyToRequest(RequestInterface $request, array $requestOptions = []): RequestInterface
     {
@@ -210,7 +210,7 @@ abstract class AccessToken implements AccessTokenInterface
      *
      * @return ResponseInterface
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     protected function sendRequest(array $credentials): ResponseInterface
@@ -235,11 +235,11 @@ abstract class AccessToken implements AccessTokenInterface
      *
      * @return array
      *
-     * @throws \Alfredluck\Kernel\Exceptions\HttpException
+     * @throws \Golivephpsdk\Kernel\Exceptions\HttpException
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     protected function getQuery(): array
     {
@@ -249,7 +249,7 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * @return string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     public function getEndpoint(): string
     {

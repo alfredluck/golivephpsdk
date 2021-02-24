@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel;
+namespace Golivephpsdk\Kernel;
 
-use Alfredluck\Kernel\Support\Collection;
+use Golivephpsdk\Kernel\Support\Collection;
 
 /**
  * Class Config.

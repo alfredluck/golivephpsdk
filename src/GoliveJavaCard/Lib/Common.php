@@ -6,7 +6,7 @@
  * Time: 11:03
  */
 
-namespace Alfredluck\Golivephpsdk\GoliveJavaCard;
+namespace Golivephpsdk\GoliveJavaCard;
 
 
 class Common

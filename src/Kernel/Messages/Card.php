@@ -19,7 +19,7 @@
  * @see      http://overtrue.me
  */
 
-namespace Alfredluck\Kernel\Messages;
+namespace Golivephpsdk\Kernel\Messages;
 
 /**
  * Class Card.

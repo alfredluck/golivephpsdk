@@ -6,7 +6,7 @@
  * Time: 15:18
  */
 
-namespace Alfredluck\Golivephpsdk\Exception;
+namespace Golivephpsdk\Exception;
 
 
 class RuntimeException

@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Messages;
+namespace Golivephpsdk\Kernel\Messages;
 
-use Alfredluck\Kernel\Contracts\MessageInterface;
-use Alfredluck\Kernel\Support\XML;
-use Alfredluck\Kernel\Traits\HasAttributes;
+use Golivephpsdk\Kernel\Contracts\MessageInterface;
+use Golivephpsdk\Kernel\Support\XML;
+use Golivephpsdk\Kernel\Traits\HasAttributes;
 use Mockery\Exception\BadMethodCallException;
 
 /**
@@ -149,7 +149,7 @@ abstract class Message implements MessageInterface
      *
      * @return array
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     public function transformForJsonRequest(array $appends = [], $withType = true): array
     {
@@ -183,7 +183,7 @@ abstract class Message implements MessageInterface
      *
      * @return array
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     protected function propertiesToArray(array $data, array $aliases = []): array
     {

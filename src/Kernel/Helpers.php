@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel;
+namespace Golivephpsdk\Kernel;
 
-use Alfredluck\Kernel\Contracts\Arrayable;
-use Alfredluck\Kernel\Exceptions\RuntimeException;
-use Alfredluck\Kernel\Support\Arr;
-use Alfredluck\Kernel\Support\Collection;
+use Golivephpsdk\Kernel\Contracts\Arrayable;
+use Golivephpsdk\Kernel\Exceptions\RuntimeException;
+use Golivephpsdk\Kernel\Support\Arr;
+use Golivephpsdk\Kernel\Support\Collection;
 
 function data_get($data, $key, $default = null)
 {

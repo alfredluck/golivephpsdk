@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Traits;
+namespace Golivephpsdk\Kernel\Traits;
 
-use Alfredluck\Kernel\Clauses\Clause;
-use Alfredluck\Kernel\Contracts\EventHandlerInterface;
-use Alfredluck\Kernel\Decorators\FinallyResult;
-use Alfredluck\Kernel\Decorators\TerminateResult;
-use Alfredluck\Kernel\Exceptions\InvalidArgumentException;
-use Alfredluck\Kernel\ServiceContainer;
+use Golivephpsdk\Kernel\Clauses\Clause;
+use Golivephpsdk\Kernel\Contracts\EventHandlerInterface;
+use Golivephpsdk\Kernel\Decorators\FinallyResult;
+use Golivephpsdk\Kernel\Decorators\TerminateResult;
+use Golivephpsdk\Kernel\Exceptions\InvalidArgumentException;
+use Golivephpsdk\Kernel\ServiceContainer;
 
 /**
  * Trait Observable.
@@ -39,9 +39,9 @@ trait Observable
      * @param \Closure|EventHandlerInterface|callable|string $handler
      * @param \Closure|EventHandlerInterface|callable|string $condition
      *
-     * @return \Alfredluck\Kernel\Clauses\Clause
+     * @return \Golivephpsdk\Kernel\Clauses\Clause
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      */
     public function push($handler, $condition = '*')
@@ -61,9 +61,9 @@ trait Observable
      * @param \Closure|EventHandlerInterface|string $handler
      * @param \Closure|EventHandlerInterface|string $condition
      *
-     * @return \Alfredluck\Kernel\Clauses\Clause
+     * @return \Golivephpsdk\Kernel\Clauses\Clause
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      */
     public function unshift($handler, $condition = '*')
@@ -83,9 +83,9 @@ trait Observable
      * @param string                                $condition
      * @param \Closure|EventHandlerInterface|string $handler
      *
-     * @return \Alfredluck\Kernel\Clauses\Clause
+     * @return \Golivephpsdk\Kernel\Clauses\Clause
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      */
     public function observe($condition, $handler)
@@ -97,9 +97,9 @@ trait Observable
      * @param string                                $condition
      * @param \Closure|EventHandlerInterface|string $handler
      *
-     * @return \Alfredluck\Kernel\Clauses\Clause
+     * @return \Golivephpsdk\Kernel\Clauses\Clause
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      */
     public function on($condition, $handler)
@@ -167,7 +167,7 @@ trait Observable
     /**
      * @param mixed $handler
      *
-     * @return \Alfredluck\Kernel\Clauses\Clause
+     * @return \Golivephpsdk\Kernel\Clauses\Clause
      */
     protected function newClause($handler): Clause
     {
@@ -221,7 +221,7 @@ trait Observable
      *
      * @return \Closure
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      */
     protected function makeClosure($handler)
@@ -259,7 +259,7 @@ trait Observable
      *
      * @return array
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      */
     protected function resolveHandlerAndCondition($handler, $condition): array

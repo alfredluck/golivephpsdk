@@ -1,6 +1,6 @@
 <?php
 
-namespace Alfredluck\Golivephpsdk\Common;
+namespace Golivephpsdk\Common;
 
 
 /**

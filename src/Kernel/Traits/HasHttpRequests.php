@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Traits;
+namespace Golivephpsdk\Kernel\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;

@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Events;
+namespace Golivephpsdk\Kernel\Events;
 
 use Symfony\Component\HttpFoundation\Response;
 

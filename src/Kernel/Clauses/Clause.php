@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Clauses;
+namespace Golivephpsdk\Kernel\Clauses;
 
 /**
  * Class Clause.

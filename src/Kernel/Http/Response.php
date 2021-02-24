@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Http;
+namespace Golivephpsdk\Kernel\Http;
 
-use Alfredluck\Kernel\Support\Collection;
-use Alfredluck\Kernel\Support\XML;
+use Golivephpsdk\Kernel\Support\Collection;
+use Golivephpsdk\Kernel\Support\XML;
 use GuzzleHttp\Psr7\Response as GuzzleResponse;
 use Psr\Http\Message\ResponseInterface;
 
@@ -38,7 +38,7 @@ class Response extends GuzzleResponse
     /**
      * @param \Psr\Http\Message\ResponseInterface $response
      *
-     * @return \Alfredluck\Kernel\Http\Response
+     * @return \Golivephpsdk\Kernel\Http\Response
      */
     public static function buildFromPsrResponse(ResponseInterface $response)
     {
@@ -86,7 +86,7 @@ class Response extends GuzzleResponse
     /**
      * Get collection data.
      *
-     * @return \Alfredluck\Kernel\Support\Collection
+     * @return \Golivephpsdk\Kernel\Support\Collection
      */
     public function toCollection()
     {

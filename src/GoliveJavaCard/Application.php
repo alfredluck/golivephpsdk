@@ -6,17 +6,18 @@
  * Time: 15:46
  */
 
-namespace Alfredluck\Golivephpsdk\GoliveJavaCard;
+namespace Golivephpsdk\GoliveJavaCard;
 
 
 
-use Alfredluck\Golivephpsdk\GoliveJavaCard\UserInfo\ServiceProvider;
-use Alfredluck\Kernel\ServiceContainer;
+use Golivephpsdk\GoliveJavaCard\UserInfo\ServiceProvider;
+use Golivephpsdk\Kernel\ServiceContainer;
 
 /**
  * Class Application
- * @property \Alfredluck\Golivephpsdk\GoliveJavaCard\UserInfo\Client        $auth
- * @package Alfredluck\Golivephpsdk\GoliveJavaCard
+ *
+ * @property \Golivephpsdk\GoliveJavaCard\UserInfo\Client        $auth
+ *
  */
 class Application  extends ServiceContainer
 {

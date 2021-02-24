@@ -2,7 +2,7 @@
 
 
 
-namespace Alfredluck\Golivephpsdk\GoliveJavaCard\UserInfo;
+namespace Golivephpsdk\GoliveJavaCard\UserInfo;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

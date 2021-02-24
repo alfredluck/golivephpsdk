@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Events;
+namespace Golivephpsdk\Kernel\Events;
 
-use Alfredluck\Kernel\AccessToken;
+use Golivephpsdk\Kernel\AccessToken;
 
 /**
  * Class AccessTokenRefreshed.
@@ -21,12 +21,12 @@ use Alfredluck\Kernel\AccessToken;
 class AccessTokenRefreshed
 {
     /**
-     * @var \Alfredluck\Kernel\AccessToken
+     * @var \Golivephpsdk\Kernel\AccessToken
      */
     public $accessToken;
 
     /**
-     * @param \Alfredluck\Kernel\AccessToken $accessToken
+     * @param \Golivephpsdk\Kernel\AccessToken $accessToken
      */
     public function __construct(AccessToken $accessToken)
     {

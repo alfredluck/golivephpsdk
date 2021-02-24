@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel;
+namespace Golivephpsdk\Kernel;
 
-use Alfredluck\Kernel\Exceptions\RuntimeException;
-use Alfredluck\Kernel\Support\AES;
-use function Alfredluck\Kernel\Support\str_random;
-use Alfredluck\Kernel\Support\XML;
+use Golivephpsdk\Kernel\Exceptions\RuntimeException;
+use Golivephpsdk\Kernel\Support\AES;
+use function Golivephpsdk\Kernel\Support\str_random;
+use Golivephpsdk\Kernel\Support\XML;
 use Throwable;
 
 /**
@@ -96,7 +96,7 @@ class Encryptor
      *
      * @return string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public function encrypt($xml, $nonce = null, $timestamp = null): string
     {
@@ -139,7 +139,7 @@ class Encryptor
      *
      * @return string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public function decrypt($content, $msgSignature, $nonce, $timestamp): string
     {
@@ -187,7 +187,7 @@ class Encryptor
      *
      * @return string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public function pkcs7Pad(string $text, int $blockSize): string
     {

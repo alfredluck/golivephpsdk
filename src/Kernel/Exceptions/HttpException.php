@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Exceptions;
+namespace Golivephpsdk\Kernel\Exceptions;
 
 use Psr\Http\Message\ResponseInterface;
 
@@ -26,7 +26,7 @@ class HttpException extends Exception
     public $response;
 
     /**
-     * @var \Psr\Http\Message\ResponseInterface|\Alfredluck\Kernel\Support\Collection|array|object|string|null
+     * @var \Psr\Http\Message\ResponseInterface|\Golivephpsdk\Kernel\Support\Collection|array|object|string|null
      */
     public $formattedResponse;
 

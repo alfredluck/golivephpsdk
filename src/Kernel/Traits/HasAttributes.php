@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Traits;
+namespace Golivephpsdk\Kernel\Traits;
 
-use Alfredluck\Kernel\Exceptions\InvalidArgumentException;
-use Alfredluck\Kernel\Support\Arr;
-use Alfredluck\Kernel\Support\Str;
+use Golivephpsdk\Kernel\Exceptions\InvalidArgumentException;
+use Golivephpsdk\Kernel\Support\Arr;
+use Golivephpsdk\Kernel\Support\Str;
 
 /**
  * Trait Attributes.
@@ -172,7 +172,7 @@ trait HasAttributes
      *
      * @return array
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     public function all()
     {
@@ -238,7 +238,7 @@ trait HasAttributes
     /**
      * Check required attributes.
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     protected function checkRequiredAttributes()
     {

@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Support;
+namespace Golivephpsdk\Kernel\Support;
 
 use ArrayAccess;
 use ArrayIterator;
-use Alfredluck\Kernel\Contracts\Arrayable;
+use Golivephpsdk\Kernel\Contracts\Arrayable;
 use IteratorAggregate;
 
 /**

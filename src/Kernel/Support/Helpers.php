@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Support;
+namespace Golivephpsdk\Kernel\Support;
 
 /*
  * helpers.

@@ -9,15 +9,15 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel;
+namespace Golivephpsdk\Kernel;
 
-use Alfredluck\Kernel\Providers\ConfigServiceProvider;
-use Alfredluck\Kernel\Providers\EventDispatcherServiceProvider;
-use Alfredluck\Kernel\Providers\ExtensionServiceProvider;
-use Alfredluck\Kernel\Providers\HttpClientServiceProvider;
-use Alfredluck\Kernel\Providers\LogServiceProvider;
-use Alfredluck\Kernel\Providers\RequestServiceProvider;
-use AlfredluckComposer\Traits\WithAggregator;
+use Golivephpsdk\Kernel\Providers\ConfigServiceProvider;
+use Golivephpsdk\Kernel\Providers\EventDispatcherServiceProvider;
+use Golivephpsdk\Kernel\Providers\ExtensionServiceProvider;
+use Golivephpsdk\Kernel\Providers\HttpClientServiceProvider;
+use Golivephpsdk\Kernel\Providers\LogServiceProvider;
+use Golivephpsdk\Kernel\Providers\RequestServiceProvider;
+use EasyWeChatComposer\Traits\WithAggregator;
 use Pimple\Container;
 
 /**
@@ -25,7 +25,7 @@ use Pimple\Container;
  *
  * @author overtrue <i@overtrue.me>
  *
- * @property \Alfredluck\Kernel\Config                          $config
+ * @property \Golivephpsdk\Kernel\Config                          $config
  * @property \Symfony\Component\HttpFoundation\Request          $request
  * @property \GuzzleHttp\Client                                 $http_client
  * @property \Monolog\Logger                                    $logger

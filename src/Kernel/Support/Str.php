@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Support;
+namespace Golivephpsdk\Kernel\Support;
 
-use Alfredluck\Kernel\Exceptions\RuntimeException;
+use Golivephpsdk\Kernel\Exceptions\RuntimeException;
 
 /**
  * Class Str.
@@ -62,7 +62,7 @@ class Str
      *
      * @return string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\RuntimeException
+     * @throws \Golivephpsdk\Kernel\Exceptions\RuntimeException
      */
     public static function random($length = 16)
     {

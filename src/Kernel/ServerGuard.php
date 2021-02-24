@@ -9,19 +9,19 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel;
+namespace Golivephpsdk\Kernel;
 
-use Alfredluck\Kernel\Contracts\MessageInterface;
-use Alfredluck\Kernel\Exceptions\BadRequestException;
-use Alfredluck\Kernel\Exceptions\InvalidArgumentException;
-use Alfredluck\Kernel\Messages\Message;
-use Alfredluck\Kernel\Messages\News;
-use Alfredluck\Kernel\Messages\NewsItem;
-use Alfredluck\Kernel\Messages\Raw as RawMessage;
-use Alfredluck\Kernel\Messages\Text;
-use Alfredluck\Kernel\Support\XML;
-use Alfredluck\Kernel\Traits\Observable;
-use Alfredluck\Kernel\Traits\ResponseCastable;
+use Golivephpsdk\Kernel\Contracts\MessageInterface;
+use Golivephpsdk\Kernel\Exceptions\BadRequestException;
+use Golivephpsdk\Kernel\Exceptions\InvalidArgumentException;
+use Golivephpsdk\Kernel\Messages\Message;
+use Golivephpsdk\Kernel\Messages\News;
+use Golivephpsdk\Kernel\Messages\NewsItem;
+use Golivephpsdk\Kernel\Messages\Raw as RawMessage;
+use Golivephpsdk\Kernel\Messages\Text;
+use Golivephpsdk\Kernel\Support\XML;
+use Golivephpsdk\Kernel\Traits\Observable;
+use Golivephpsdk\Kernel\Traits\ResponseCastable;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -66,7 +66,7 @@ class ServerGuard
     ];
 
     /**
-     * @var \Alfredluck\Kernel\ServiceContainer
+     * @var \Golivephpsdk\Kernel\ServiceContainer
      */
     protected $app;
 
@@ -75,7 +75,7 @@ class ServerGuard
      *
      * @codeCoverageIgnore
      *
-     * @param \Alfredluck\Kernel\ServiceContainer $app
+     * @param \Golivephpsdk\Kernel\ServiceContainer $app
      */
     public function __construct(ServiceContainer $app)
     {
@@ -92,8 +92,8 @@ class ServerGuard
      * @return Response
      *
      * @throws BadRequestException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      */
     public function serve(): Response
     {
@@ -114,7 +114,7 @@ class ServerGuard
     /**
      * @return $this
      *
-     * @throws \Alfredluck\Kernel\Exceptions\BadRequestException
+     * @throws \Golivephpsdk\Kernel\Exceptions\BadRequestException
      */
     public function validate()
     {
@@ -148,11 +148,11 @@ class ServerGuard
     /**
      * Get request message.
      *
-     * @return array|\Alfredluck\Kernel\Support\Collection|object|string
+     * @return array|\Golivephpsdk\Kernel\Support\Collection|object|string
      *
      * @throws BadRequestException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      */
     public function getMessage()
     {
@@ -183,9 +183,9 @@ class ServerGuard
      *
      * @return \Symfony\Component\HttpFoundation\Response
      *
-     * @throws \Alfredluck\Kernel\Exceptions\BadRequestException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\BadRequestException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      */
     protected function resolve(): Response
     {
@@ -217,11 +217,11 @@ class ServerGuard
     /**
      * @param string                                                   $to
      * @param string                                                   $from
-     * @param \Alfredluck\Kernel\Contracts\MessageInterface|string|int $message
+     * @param \Golivephpsdk\Kernel\Contracts\MessageInterface|string|int $message
      *
      * @return string
      *
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
      */
     public function buildResponse(string $to, string $from, $message)
     {
@@ -253,9 +253,9 @@ class ServerGuard
      *
      * @return array
      *
-     * @throws \Alfredluck\Kernel\Exceptions\BadRequestException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidArgumentException
-     * @throws \Alfredluck\Kernel\Exceptions\InvalidConfigException
+     * @throws \Golivephpsdk\Kernel\Exceptions\BadRequestException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidArgumentException
+     * @throws \Golivephpsdk\Kernel\Exceptions\InvalidConfigException
      */
     protected function handleRequest(): array
     {
@@ -277,7 +277,7 @@ class ServerGuard
      *
      * @param string                                        $to
      * @param string                                        $from
-     * @param \Alfredluck\Kernel\Contracts\MessageInterface $message
+     * @param \Golivephpsdk\Kernel\Contracts\MessageInterface $message
      *
      * @return string
      */
@@ -319,7 +319,7 @@ class ServerGuard
      *
      * @return array
      *
-     * @throws \Alfredluck\Kernel\Exceptions\BadRequestException
+     * @throws \Golivephpsdk\Kernel\Exceptions\BadRequestException
      */
     protected function parseMessage($content)
     {

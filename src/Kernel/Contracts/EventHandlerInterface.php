@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Contracts;
+namespace Golivephpsdk\Kernel\Contracts;
 
 /**
  * Interface EventHandlerInterface.

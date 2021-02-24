@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Alfredluck\Kernel\Log;
+namespace Golivephpsdk\Kernel\Log;
 
-use Alfredluck\Kernel\ServiceContainer;
+use Golivephpsdk\Kernel\ServiceContainer;
 use InvalidArgumentException;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\ErrorLogHandler;
@@ -33,7 +33,7 @@ use Psr\Log\LoggerInterface;
 class LogManager implements LoggerInterface
 {
     /**
-     * @var \Alfredluck\Kernel\ServiceContainer
+     * @var \Golivephpsdk\Kernel\ServiceContainer
      */
     protected $app;
 
@@ -70,7 +70,7 @@ class LogManager implements LoggerInterface
     /**
      * LogManager constructor.
      *
-     * @param \Alfredluck\Kernel\ServiceContainer $app
+     * @param \Golivephpsdk\Kernel\ServiceContainer $app
      */
     public function __construct(ServiceContainer $app)
     {

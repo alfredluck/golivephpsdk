@@ -6,11 +6,11 @@
  * Time: 10:53
  */
 
-namespace Alfredluck\Golivephpsdk\GoliveJavaCard\UserInfo;
+namespace Golivephpsdk\GoliveJavaCard\UserInfo;
 
 
-use Alfredluck\Golivephpsdk\Common\HttpClient;
-use Alfredluck\Golivephpsdk\GoliveJavaCard\Common;
+use Golivephpsdk\Common\HttpClient;
+use Golivephpsdk\GoliveJavaCard\Common;
 
 
 class Client
