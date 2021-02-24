@@ -6,15 +6,15 @@
  * Time: 10:53
  */
 
-namespace Alfredluck\Golivephpsdk\GoliveJavaCard;
+namespace Alfredluck\Golivephpsdk\GoliveJavaCard\UserInfo;
 
 
-use Alfredluck\Golivephpsdk\HttpClient;
+use Alfredluck\Golivephpsdk\Common\HttpClient;
+use Alfredluck\Golivephpsdk\GoliveJavaCard\Common;
 
 
-class User
+class Client
 {
-
 
     protected $appId;
 
@@ -23,12 +23,11 @@ class User
     protected $apiUrl;
 
 
-    public function __construct($appId, $appSecret, $apiUrl)
+    public function __construct($app)
     {
-        $this->appId     = $appId;
-        $this->appSecret = $appSecret;
-        $this->apiUrl    = $apiUrl;
-
+        $this->appId     = $app['appId'];
+        $this->appSecret = $app['appSecret'];
+        $this->apiUrl    = $app['apiUrl'];
     }
 
     /**
@@ -41,7 +40,6 @@ class User
      */
     public function getUserInfo($name, $pone, $tenantCode, $tenantId)
     {
-
         $params = [
             'appId'     => $this->appId,
             'body'      => [
@@ -62,11 +60,8 @@ class User
             $client->setGuzzleOptions(['headers' => ['Content-Type' => 'application/json']]);
 
             $response = $client->getHttpClient()->post($this->apiUrl . '/account/getAccountCode', [
-
                 'body' => json_encode($params)
-
                 ])->getBody()->getContents();
-
             return \json_decode($response, true);
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage(), $e->getCode(), $e);

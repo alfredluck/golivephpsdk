@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "6.3.*"
+        "guzzlehttp/guzzle": "6.3.*",
+        "pimple/pimple": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -20,11 +21,10 @@
         "phpunit/phpunit": "^9.5",
         "mockery/mockery": "^1.4"
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Alfredluck\\Golivephpsdk\\GoliveJavaCard\\ServiceProvider"
-            ]
+    "repositories": {
+        "weather": {
+            "type": "path",
+            "url": "../golivephpsdk"
         }
     }
 }
