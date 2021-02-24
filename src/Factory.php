@@ -8,7 +8,9 @@ use Golivephpsdk\Kernel\Support\Str;
 
 /**
  * Class Factory
+ *
  * @method static \Golivephpsdk\GoliveJavaCard\Application   goliveJavaCard(array $config)
+ *
  * @package Golivephpsdk
  */
 class Factory
