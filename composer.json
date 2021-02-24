@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Alfredluck\\Golivephpsdk\\ServiceProvider"
+                "Alfredluck\\Golivephpsdk\\GoliveJavaCard\\ServiceProvider"
             ]
         }
     }
