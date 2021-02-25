@@ -13,6 +13,7 @@
         "php": ">=7.2",
         "ext-fileinfo": "*",
         "ext-openssl": "*",
+        "ext-json": "*",
         "ext-simplexml": "*",
         "easywechat-composer/easywechat-composer": "^1.1",
         "guzzlehttp/guzzle": "^6.2",
