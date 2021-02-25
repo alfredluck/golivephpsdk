@@ -50,10 +50,9 @@ class BaseClient
      * @param \Golivephpsdk\Kernel\ServiceContainer                    $app
      * @param \Golivephpsdk\Kernel\Contracts\AccessTokenInterface|null $accessToken
      */
-    public function __construct(ServiceContainer $app, AccessTokenInterface $accessToken = null)
+    public function __construct(ServiceContainer $app)
     {
         $this->app = $app;
-        $this->accessToken = $accessToken ?? $this->app['access_token'];
     }
 
     /**

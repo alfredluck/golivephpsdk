@@ -11,25 +11,11 @@ namespace Golivephpsdk\GoliveJavaCard\UserInfo;
 
 use Golivephpsdk\Common\HttpClient;
 use Golivephpsdk\GoliveJavaCard\Common;
+use Golivephpsdk\Kernel\BaseClient;
 
 
-class Client
+class Client extends BaseClient
 {
-
-    protected $appId;
-
-    protected $appSecret;
-
-    protected $apiUrl;
-
-
-    public function __construct($app)
-    {
-        $this->appId     = $app['appId'];
-        $this->appSecret = $app['appSecret'];
-        $this->apiUrl    = $app['apiUrl'];
-    }
-
     /**
      * 获取java青卡用户信息
      * @param string $name
@@ -41,7 +27,7 @@ class Client
     public function getUserInfo($name, $pone, $tenantCode, $tenantId)
     {
         $params = [
-            'appId'     => $this->appId,
+            'appId'     => $this->app['config']->get('appId'),
             'body'      => [
                 'phone'      => $pone,
                 'pwd'        => $name,
@@ -52,16 +38,15 @@ class Client
             'timestamp' => date('Y-m-d H:i:s'),
             'version'   => '1.0',
         ];
+
         try {
             $common              = new Common();
-            $params['signValue'] = $common->getSign($params, $this->appSecret);
-
+            $params['signValue'] = $common->getSign($params, $this->app['config']->get('appSecret'));
             $client = new HttpClient();
             $client->setGuzzleOptions(['headers' => ['Content-Type' => 'application/json']]);
-
-            $response = $client->getHttpClient()->post($this->apiUrl . '/account/getAccountCode', [
+            $response = $client->getHttpClient()->post($this->app['config']->get('apiUrl') . '/account/getAccountCode', [
                 'body' => json_encode($params)
-                ])->getBody()->getContents();
+            ])->getBody()->getContents();
             return \json_decode($response, true);
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage(), $e->getCode(), $e);
