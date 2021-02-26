@@ -2,6 +2,7 @@
 
 <p align="center"> golive php api sdk.</p>
 
+[![Build Status](https://travis-ci.org/alfredluck/golivephpsdk.svg?branch=master)](https://travis-ci.org/alfredluck/golivephpsdk)
 
 ## Installing
 
