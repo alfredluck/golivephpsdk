@@ -32,7 +32,7 @@ class GoliveJavaCardTest extends TestCase
         ];
         $factory = Factory::goliveJavaCard($config);
         $response = $factory->auth->getUserInfo('杨军','18167106183','S10106',144);
-        var_dump($response);
+        //var_dump($response);
         $this->assertArrayHasKey('code',$response);
     }
 }
