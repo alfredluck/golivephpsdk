@@ -41,8 +41,6 @@ class Client extends BaseClient
 
         try {
             $common              = new Common();
-
-
             $params['signValue'] = $common->getSign($params, $this->app['config']->get('appSecret'));
             $client = new HttpClient();
             $client->setGuzzleOptions(['headers' => ['Content-Type' => 'application/json']]);
