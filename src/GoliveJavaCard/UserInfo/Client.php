@@ -44,7 +44,7 @@ class Client extends BaseClient
             $params['signValue'] = $common->getSign($params, $this->app['config']->get('appSecret'));
             $client = new HttpClient();
             $client->setGuzzleOptions(['headers' => ['Content-Type' => 'application/json']]);
-            $response = $client->getHttpClient()->post($this->app['config']->get('apiUrl') . '/account/getAccountCode', [
+            $response = $client->getHttpClient()->post($this->app['config']->get('apiUrl') . '/1account/getAccountCode', [
                 'body'    => json_encode($params),
                 'timeout' => 10
             ])->getBody()->getContents();
