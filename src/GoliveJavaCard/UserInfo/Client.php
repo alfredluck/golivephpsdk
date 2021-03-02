@@ -45,8 +45,8 @@ class Client extends BaseClient
             $client = new HttpClient();
             $client->setGuzzleOptions(['headers' => ['Content-Type' => 'application/json']]);
             $response = $client->getHttpClient()->post($this->app['config']->get('apiUrl') . '/account/getAccountCode', [
-                'body' => json_encode($params),
-                'timeout'=> 10
+                'body'    => json_encode($params),
+                'timeout' => 10
             ])->getBody()->getContents();
             return \json_decode($response, true);
         } catch (\Exception $e) {
